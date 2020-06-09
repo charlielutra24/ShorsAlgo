@@ -1,3 +1,5 @@
+# g = a random (smallish) number
+# N = the large number we want to factorise
 done = False
 while not done:
     # Each iteration, raise g to the next power p.
