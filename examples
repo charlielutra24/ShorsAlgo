@@ -1,0 +1,90 @@
+Example: N = 21, g = 2.
+g^2 = 4 = 0*21 + 4
+g^3 = 8 = 0*21 + 8
+g^4 = 16 = 0*21 + 16
+g^5 = 32 = 1*21 + 11
+g^6 = 64 = 3*21 + 1
+p = 6, p/2 = 3
+g^(p/2) +1 = 2^3 +1 = 8+1 = 9
+g^(p/2) -1 = 2^3 -1 = 8-1 = 7
+GCF of 9 and 21 is 3
+GCF of 7 and 21 is 7
+3 * 7 = 21
+
+Larger example: N=35, g=3
+g^p must end in 1 or 6 if it is to be m*N because 5 is a factor of N
+so calculation can be skipped for other end digits
+I am using this to save time and space here, but the program could not use this
+g^2 = 9
+g^3 = 27
+g^4 = 81 = 2*35 + 11
+g^5 = 243
+g^6 = 729
+g^7 = 2187
+g^8 = 6561 = 187*35 + 16
+g^9 = 19683
+g^10 = 59049
+g^11 = 177147
+g^12 = 531441 = 15184*35 + 1
+p = 12, p/2 = 6
+g^(p/2) +1 = 3^6 +1 = 729+1 = 730
+g^(p/2) -1 = 3^6 -1 = 729-1 = 728
+GCF of 730 and 35 is 5
+GCF of 728 and 35 is 7
+5 * 7 = 35
+
+Examples that fail:
+
+g=2, N=217 (=7*31)
+I will use shorter notation using % - modulo function - from here on out.
+g^2 = 4, 217 % 4 = 4
+g^3 = 8, 217 % 8 = 8
+g^4 = 16, 217 % 16 = 16
+g^5 = 32, 217 % 32 = 32
+g^6 = 64, 217 % 64 = 64
+g^7 = 128, 217 % 128 = 128
+g^8 = 256, 217 % 256 = 39
+g^9 = 512, 217 % 512 = 78
+g^10 = 1024, 217 % 1024 = 156
+g^11 = 2048, 217 % 2048 = 95
+g^12 = 4096, 217 % 4096 = 190
+g^13 = 8192, 217 % 8192 = 163
+g^14 = 16384, 217 % 16384 = 109
+g^15 = 32768, 217 % 32768 = 1
+p=15, p/2 = 7.5 which is not an integer
+Cannot continue: must pick new value for g
+
+g=3, N=217
+g^2 mod 217 = 9
+g^3 mod 217 = 27
+g^4 mod 217 = 81
+g^5 mod 217 = 26
+g^6 mod 217 = 78
+g^7 mod 217 = 17
+g^8 mod 217 = 51
+g^9 mod 217 = 53
+g^10 mod 217 = mod= 25
+g^11 mod 217 = mod= 75
+g^12 mod 217 = mod= 8
+...
+g^30 mod 217 = 1
+p=30 p/2 = 15
+g^(p/2) +1 = 3^15 +1 = 14348907
+g^(p/2) -1 = 3^15 -1 = 14348909
+GCF of 14348907 and 217 is 217
+GCF of 14348909 and 217 is 1
+Cannot continue: must pick new value for g
+
+For completeness:
+g=5, N=217
+g^2 mod 217 = 25
+g^3 mod 217 = 125
+g^4 mod 217 = 191
+g^5 mod 217 = 87
+g^6 mod 217 = 1
+p=6, p/2 = 3
+g^(p/2) +1 = 5^3 +1 = 126
+g^(p/2) -1 = 5^3 -1 = 124
+GCF of 126 and 217 is 7
+GCF of 124 and 217 is 31
+7 * 31 = 217
