@@ -17,7 +17,7 @@ For these possibilities, we cannot find a factor of N, so we pick a new value fo
 3. Each of g^(p/2)+1 and g^(p/2)-1 is a multiple of the two factors of N.
 This is the outcome we want. This occurs roughly 3/8 of the time.
 We then use Euclid's algorithm to find:
-GCF of N and g^(p/2)+1 for one factor of N,
+GCF of N and g^(p/2)+1 for one factor of N, and
 GCF of N and g^(p/2)-1 for the other factor of N.
 
 
