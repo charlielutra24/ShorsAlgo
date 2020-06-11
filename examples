@@ -1,4 +1,5 @@
 Example: N = 21, g = 2.
+g^1 = 2 = 0*21 + 2
 g^2 = 4 = 0*21 + 4
 g^3 = 8 = 0*21 + 8
 g^4 = 16 = 0*21 + 16
@@ -15,6 +16,7 @@ Larger example: N=35, g=3
 g^p must end in 1 or 6 if it is to be m*N because 5 is a factor of N
 so calculation can be skipped for other end digits
 I am using this to save time and space here, but the program could not use this
+g^1 = 3
 g^2 = 9
 g^3 = 27
 g^4 = 81 = 2*35 + 11
@@ -37,6 +39,7 @@ Examples that fail:
 
 g=2, N=217 (=7*31)
 I will use shorter notation using % - modulo function - from here on out.
+g^1 = 2, 217 % 2 = 2
 g^2 = 4, 217 % 4 = 4
 g^3 = 8, 217 % 8 = 8
 g^4 = 16, 217 % 16 = 16
@@ -55,6 +58,7 @@ p=15, p/2 = 7.5 which is not an integer
 Cannot continue: must pick new value for g
 
 g=3, N=217
+g^1 mod 217 = 3
 g^2 mod 217 = 9
 g^3 mod 217 = 27
 g^4 mod 217 = 81
@@ -77,6 +81,7 @@ Cannot continue: must pick new value for g
 
 For completeness:
 g=5, N=217
+g^1 mod 217 = 5
 g^2 mod 217 = 25
 g^3 mod 217 = 125
 g^4 mod 217 = 191

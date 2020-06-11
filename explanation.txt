@@ -1,7 +1,7 @@
 g = a random (smallish) number
 N = the large number we want to factorise
 
-Start iteration with iterator p = 2.
+Start iteration with iterator p.
 
 Eventually g^p = (some integer m * N) + 1.
 So our eventual goal is to find the value of p needed for this to be true.
